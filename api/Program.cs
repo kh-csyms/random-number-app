@@ -1,4 +1,15 @@
+using Serilog;
+using Microsoft.AspNetCore.HttpOverrides;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Seq("http://logs.hstry.dev", apiKey: "5YbS1PWKFLrOOQhbB7nm")
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
@@ -26,11 +37,22 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
 
+// Capture client IP
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+
 var random = new Random();
 
-app.MapGet("/random-number", () =>
+app.MapGet("/random-number", (HttpContext context) =>
 {
-    return Results.Ok(random.Next(1, 101));
+    var number = random.Next(1, 101);
+    var clientIp = context.Connection.RemoteIpAddress?.ToString();
+
+    Log.Information("Button was pushed, the new number generated was: {Number}, IP: {IP}", number, clientIp);
+
+    return Results.Ok(number);
 })
 .WithName("GetRandomNumber")
 .WithOpenApi();

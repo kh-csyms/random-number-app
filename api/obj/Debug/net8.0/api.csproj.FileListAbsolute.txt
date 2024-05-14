@@ -31,3 +31,16 @@ D:\source\repos\random-number-app\api\obj\Debug\net8.0\refint\api.dll
 D:\source\repos\random-number-app\api\obj\Debug\net8.0\api.pdb
 D:\source\repos\random-number-app\api\obj\Debug\net8.0\api.genruntimeconfig.cache
 D:\source\repos\random-number-app\api\obj\Debug\net8.0\ref\api.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+D:\source\repos\random-number-app\api\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
+D:\source\repos\random-number-app\api\obj\Debug\net8.0\api.sourcelink.json
