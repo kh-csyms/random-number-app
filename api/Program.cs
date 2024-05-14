@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Seq("http://logs.hstry.dev", apiKey: "5YbS1PWKFLrOOQhbB7nm")
+    .WriteTo.Seq("https://logs.hstry.dev", apiKey: "5YbS1PWKFLrOOQhbB7nm")
     .Enrich.FromLogContext()
     .CreateLogger();
 
