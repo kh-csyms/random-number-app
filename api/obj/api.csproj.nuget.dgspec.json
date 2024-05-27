@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\repos\\random-number-app\\api\\api.csproj": {}
+    "C:\\Users\\Keenan\\Documents\\GitHub\\random-number-app\\api\\api.csproj": {}
   },
   "projects": {
-    "D:\\source\\repos\\random-number-app\\api\\api.csproj": {
+    "C:\\Users\\Keenan\\Documents\\GitHub\\random-number-app\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\repos\\random-number-app\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Keenan\\Documents\\GitHub\\random-number-app\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "D:\\source\\repos\\random-number-app\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\repos\\random-number-app\\api\\obj\\",
+        "projectPath": "C:\\Users\\Keenan\\Documents\\GitHub\\random-number-app\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\Keenan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Keenan\\Documents\\GitHub\\random-number-app\\api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\charl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Keenan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://nuget.pkg.github.com/know-history/index.json": {},
+          "https://pkgs.dev.azure.com/KnowHistory/_packaging/KnowHistory/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
