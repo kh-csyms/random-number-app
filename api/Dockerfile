@@ -1,22 +1,17 @@
 # Use the official image as a parent image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-# Use SDK image to build the application
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /api
-COPY ["api.csproj", "./"]
-RUN dotnet restore "api.csproj"
-COPY . .
-RUN dotnet build "api.csproj" -c Release -o /app/build
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish "api.csproj" -c Release -o /app/publish
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-# Build runtime image
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "api.dll"]
+
