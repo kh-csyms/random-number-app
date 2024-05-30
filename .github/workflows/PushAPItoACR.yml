@@ -18,5 +18,5 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build . -t  khtestacr.azurecr.io/myapp:ssm-api
-        docker push khtestacr.azurecr.io/myapp:ssm-api
+        docker build . -t  khtestacr.azurecr.io/rna:rna-api
+        docker push khtestacr.azurecr.io/rna:rna-api
