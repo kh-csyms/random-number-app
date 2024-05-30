@@ -1,6 +1,7 @@
 # Use the official image as a parent image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
+
 EXPOSE 80
 EXPOSE 443
 
@@ -13,5 +14,6 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
 COPY --from=build-env /app/out .
+
 ENTRYPOINT ["dotnet", "api.dll"]
 
