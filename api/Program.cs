@@ -2,6 +2,7 @@ using Serilog;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using System.Security.Authentication;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,5 +60,8 @@ app.MapGet("/random-number", (HttpContext context) =>
 })
 .WithName("GetRandomNumber")
 .WithOpenApi();
+
+// Configure Kestrel server to listen on any IP address
+builder.WebHost.UseUrls("http://*:5000", "https://*:5001");
 
 app.Run();
