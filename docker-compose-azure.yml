@@ -5,10 +5,13 @@ services:
     depends_on:
       - api
     ports:
-      - 80:80 
+      - 80:80
+    environment:
+      WEBSITES_PORT: 80  # Explicitly specify the port the UI service should use
   api:
     image: khtestacr.azurecr.io/rna:rna-api
     ports:
-      - 80:80
+      - 5000:80  # Map container's port 80 to host's port 5000
     environment:
       ASPNETCORE_URLS: "http://+:80"
+      WEBSITES_PORT: 80  # Explicitly specify the port the API service should use
