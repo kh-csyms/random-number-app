@@ -8,7 +8,7 @@ function App() {
 
     const fetchRandomNumber = async () => {
         try {
-            const response = await axios.get('http://rna-mc-test.azurewebsites.net:5000/random-number'); // This was the port number on my local machine so it may need to change
+            const response = await axios.get('http://localhost:5000/random-number'); // This was the port number on my local machine so it may need to change
             setNumber(response.data);
         } catch (error) {
             console.error('Error fetching the random number', error);
