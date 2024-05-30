@@ -5,12 +5,10 @@ services:
     depends_on:
       - api
     ports:
-      - 3000:3000
+      - 80:80 
   api:
     image: khtestacr.azurecr.io/rna:rna-api
     ports:
-      - 5000:5000
-      - 5001:5001
+      - 5000:80
     environment:
-      ASPNETCORE_HTTP_PORT: "https://+:5001"
-      ASPNETCORE_URLS: "http://+:5000"
+      ASPNETCORE_URLS: "http://+:80"
