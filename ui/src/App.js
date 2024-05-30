@@ -4,11 +4,12 @@ import Container from 'react-bootstrap/Container';
 import axios from 'axios';
 
 function App() {
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
     const [number, setNumber] = useState(null);
 
     const fetchRandomNumber = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/random-number'); // This was the port number on my local machine so it may need to change
+            const response = await axios.get(`${apiBaseUrl}/random-number`);
             setNumber(response.data);
         } catch (error) {
             console.error('Error fetching the random number', error);
