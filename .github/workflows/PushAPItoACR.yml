@@ -18,5 +18,11 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build . -t  khtestacr.azurecr.io/rna:rna-api
+        docker build . -t khtestacr.azurecr.io/rna:rna-api
         docker push khtestacr.azurecr.io/rna:rna-api
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'RandomNumberAppApi'
+        slot-name: 'production'
+        images: 'khtestacr.azurecr.io/rna:rna-api'
