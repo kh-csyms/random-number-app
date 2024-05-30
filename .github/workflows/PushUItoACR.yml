@@ -20,9 +20,9 @@ jobs:
     - run: |
         docker build . -t khtestacr.azurecr.io/rna:rna-ui
         docker push khtestacr.azurecr.io/rna:rna-ui
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'RandomNumberAppUi'
-        slot-name: 'production'
-        images: 'khtestacr.azurecr.io/rna:rna-ui'
+    # - name: Deploy to Azure Web App
+    #   uses: azure/webapps-deploy@v2
+    #   with:
+    #     app-name: 'RandomNumberAppUi'
+    #     slot-name: 'production'
+    #     images: 'khtestacr.azurecr.io/rna:rna-ui'
