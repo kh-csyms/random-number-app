@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import axios from 'axios';
 
 function App() {
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
     const [number, setNumber] = useState(null);
 
     const fetchRandomNumber = async () => {
