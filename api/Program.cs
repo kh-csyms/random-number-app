@@ -1,14 +1,7 @@
-using Serilog;
-using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.Extensions.Configuration;
-using System.Security.Authentication;
-using Microsoft.AspNetCore.Hosting;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
-//    .WriteTo.Seq(builder.Configuration["log_url"]!, apiKey: builder.Configuration["log_key"])
     .WriteTo.Seq("https://logs.hstry.dev", apiKey: "5YbS1PWKFLrOOQhbB7nm")
     .Enrich.FromLogContext()
     .CreateLogger();
@@ -32,11 +25,8 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-//}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
@@ -49,7 +39,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 
 var random = new Random();
 
-app.MapGet("/random-number", (HttpContext context) =>
+app.MapGet("/api/random-number", (HttpContext context) =>
 {
     var number = random.Next(1, 101);
     var clientIp = context.Connection.RemoteIpAddress?.ToString();
