@@ -9,7 +9,7 @@ function App() {
 
     const fetchRandomNumber = async () => {
         try {
-            const response = await axios.get(`${apiBaseUrl}/random-number`);
+            const response = await axios.get('/api/random-number');
             setNumber(response.data);
         } catch (error) {
             console.error('Error fetching the random number', error);
