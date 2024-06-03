@@ -90,3 +90,4 @@ C:\Users\Keenan\Documents\GitHub\random-number-app\api\obj\Debug\net8.0\refint\a
 C:\Users\Keenan\Documents\GitHub\random-number-app\api\obj\Debug\net8.0\api.pdb
 C:\Users\Keenan\Documents\GitHub\random-number-app\api\obj\Debug\net8.0\api.genruntimeconfig.cache
 C:\Users\Keenan\Documents\GitHub\random-number-app\api\obj\Debug\net8.0\ref\api.dll
+C:\Users\Keenan\Documents\GitHub\random-number-app\api\bin\Debug\net8.0\api.staticwebassets.runtime.json

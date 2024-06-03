@@ -60,5 +60,6 @@ app.MapGet("/random-number", (HttpContext context) =>
 })
 .WithName("GetRandomNumber")
 .WithOpenApi();
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.Run();
