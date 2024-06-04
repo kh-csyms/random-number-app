@@ -1,4 +1,4 @@
-name: Push UI to ACR
+name: Push API to ACR
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ui
+        working-directory: api
     steps:
     - uses: actions/checkout@v2
     - uses: azure/docker-login@v1
@@ -18,5 +18,5 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build . -t  khtestacr.azurecr.io/rna:rna-ui
-        docker push khtestacr.azurecr.io/rna:rna-ui
+        docker build . -t  khtestacr.azurecr.io/rna:rna
+        docker push khtestacr.azurecr.io/rna:rna
