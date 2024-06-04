@@ -42,8 +42,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-03T18:54:22.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T18:54:22.582Z"
             },
             {
               "$type": "Document",
@@ -53,7 +52,7 @@
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Keenan\\Documents\\GitHub\\random-number-app\\api\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-05-31T20:29:30.06Z",
               "EditorCaption": ""
@@ -68,8 +67,7 @@
               "RelativeToolTip": "api.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-05-31T20:29:19.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T20:29:19.317Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAAAswCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T20:12:49.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-27T20:12:49.672Z"
             }
           ]
         }
